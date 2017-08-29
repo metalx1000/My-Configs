@@ -65,9 +65,12 @@ Mod1 F2 :Exec fbrun
 
 # volume settings, using common keycodes
 # if these don't work, use xev to find out your real keycodes
-176 :Exec amixer sset Master,0 1+
-174 :Exec amixer sset Master,0 1-
-160 :Exec amixer sset Master,0 toggle
+123 :Exec pactl set-sink-volume @DEFAULT_SINK@ +5%
+122 :Exec pactl set-sink-volume @DEFAULT_SINK@ -10%
+121 :Exec pactl set-sink-mute @DEFAULT_SINK@ toggle
+#121 :Exec amixer sset Master,0 toggle
+
+164 :Exec paswitcher
 
 # current window commands
 Mod1 F4 :Close
@@ -134,12 +137,14 @@ Control Mod4 F11 :TakeToWorkspace 11
 Control Mod4 F12 :TakeToWorkspace 12
 
 # Move to Display
-Shift Mod4 Right :ExecCommand wmctrl -r :ACTIVE: -e 0,1367,0,-1,-1
+Shift Mod4 Right :ExecCommand wmctrl -r :ACTIVE: -e 0,1920,0,-1,-1
 Shift Mod4 Left :ExecCommand wmctrl -r :ACTIVE: -e 0,0,0,-1,-1
 
+Mod4 t :ToggleDecor
+
 # Tiling
-Control Mod1 Up :ArrangeWindowsVertical
-Control Mod1 Down :ArrangeWindowsHorizontal
+Control Mod1 Up :ToggleCmd {ArrangeWindowsVertical} {Exec maximize_all}
+Control Mod1 Down :ToggleCmd {ArrangeWindowsHorizontal} {Exec maximize_all}
 
 Control Mod4 Left :MacroCmd {ResizeTo 50% 100%} {MoveTo 00 00 Left}
 Control Mod4 Right :MacroCmd {ResizeTo 50% 100%} {MoveTo 00 00 Right}
