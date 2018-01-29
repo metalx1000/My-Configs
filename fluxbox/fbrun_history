@@ -1,0 +1,9 @@
+xcksudcpulxterm -c '/bin/bash'
+let
+nm-applet
+ksudo nm-applet
+kupfer
+conky
+pulseaudio
+xterm -c 'bash'
+xterm -c '/bin/bash'
