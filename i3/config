@@ -214,3 +214,7 @@ bindsym --whole-window $mod+button3 floating toggle
 #Blender
 #for_window [title="Blender"] move workspace 6;workspace 6
 #for_window [class="Blender"] move workspace 7;workspace 6
+
+#Work Space Bindings
+bindsym $mod+Prior              workspace prev
+bindsym $mod+Next               workspace next
