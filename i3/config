@@ -85,7 +85,7 @@ bindsym $mod+Shift+Right move right
 #bindsym $mod+v split v
 
 # enter fullscreen mode for the focused container
-#bindsym $mod+f fullscreen toggle
+bindsym $mod+f fullscreen toggle
 #bindsym $mod+Shift+Up fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
@@ -208,9 +208,9 @@ bindsym --whole-window $mod+button2 kill
 bindsym --whole-window $mod+button3 floating toggle
 
 #GIMP
-for_window [title="GIMP Startup"] move workspace 5;workspace 5
-for_window [class="Gimp"] move workspace 5
+#for_window [title="GIMP Startup"] move workspace 5;workspace 5
+#for_window [class="Gimp"] move workspace 5
 
 #Blender
-for_window [title="Blender"] move workspace 6;workspace 6
-for_window [class="Blender"] move workspace 7;workspace 6
+#for_window [title="Blender"] move workspace 6;workspace 6
+#for_window [class="Blender"] move workspace 7;workspace 6
