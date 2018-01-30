@@ -1,3 +1,3 @@
 #!/bin/bash
 
-cp -v * ~/.config/i3/* 
+cp -rv * ~/.config/i3/* 
